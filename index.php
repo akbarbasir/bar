@@ -6,8 +6,8 @@ Modified by Ilyasa
 */
 require_once('./line_class.php');
 
-$channelAccessToken = 'YOUR-CHANNEL-ACCESS-TOKEN'; //Your Channel Access Token
-$channelSecret = 'YOUR-CHANNEL-SECRET';//Your Channel Secret
+$channelAccessToken = '73lupBTYuO4lpoXzzc2eo0drohGK+Dl2kg1Vl8SDkug2Z9KL34rcqegK0VRtvUF3PocQpECkassFHG+6+Z4OX3ASZwDK4CB/534qnMndxd//X+8D5jOnjVa7aJsfO5rhHlG7rLDbTCodxS2nJNDdoQdB04t89/1O/w1cDnyilFU='; //Your Channel Access Token
+$channelSecret = 'a680925282e9b3dff0ed7c3d14fd9cb5';//Your Channel Secret
 
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 
@@ -25,7 +25,7 @@ if($message['type']=='sticker')
 							'messages' => array(
 								array(
 										'type' => 'text',									
-										'text' => 'Terima Kasih Stikernya.'										
+										'text' => 'Terima Kasih Stikernya Tapi jellek stikermu.'										
 									
 									)
 							)
@@ -34,7 +34,7 @@ if($message['type']=='sticker')
 }
 else
 $pesan=str_replace(" ", "%20", $pesan_datang);
-$key = 'YOUR-API-KEY-SIMSIMI'; //API SimSimi
+$key = 'd18934ea-0ee5-49cd-b830-b0edf26b23cd'; //API SimSimi
 $url = 'http://sandbox.api.simsimi.com/request.p?key='.$key.'&lc=id&ft=1.0&text='.$pesan;
 $json_data = file_get_contents($url);
 $url=json_decode($json_data,1);
@@ -66,7 +66,7 @@ if($url['result'] != 100)
 							'messages' => array(
 								array(
 										'type' => 'text',					
-										'text' => 'Maaf '.$profil->displayName.' Server Kami Sedang Sibuk Sekarang.'
+										'text' => 'Maaf '.$profil->displayName.' Server Kami Sedang Sibuk Sekarang Dan capekka juga'
 									)
 							)
 						);
